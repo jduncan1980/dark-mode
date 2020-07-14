@@ -41,20 +41,8 @@ const App = () => {
 		<div className='App'>
 			<Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
 			<Charts coinData={coinData} curSign={curSign} darkMode={darkMode} />
+
 			<div className='btn-container'>
-				<select
-					className='currency-select'
-					value={currency}
-					onChange={handleCurrencyChange}
-				>
-					<option value='usd'>US Dollars</option>
-					<option value='eur'>Euro</option>
-					<option value='rub'>Russian Rubble</option>
-					<option value='idr'>Indonesian Rupiah</option>
-					<option value='krw'>S. Korean Won</option>
-					<option value='cny'>Chinese Yuan</option>
-					<option value='jpy'>Japanese Yen</option>
-				</select>
 				<button
 					className='btn btn-prev'
 					onClick={handlePageDec}
@@ -69,6 +57,24 @@ const App = () => {
 				>
 					Next
 				</button>
+			</div>
+			<div className='select-container'>
+				<label htmlFor='currency'>Preferred Currency</label>
+				<select
+					id='currency'
+					name='currency'
+					className='currency-select'
+					value={currency}
+					onChange={handleCurrencyChange}
+				>
+					<option value='usd'>US Dollars</option>
+					<option value='eur'>Euro</option>
+					<option value='rub'>Russian Rubble</option>
+					<option value='idr'>Indonesian Rupiah</option>
+					<option value='krw'>S. Korean Won</option>
+					<option value='cny'>Chinese Yuan</option>
+					<option value='jpy'>Japanese Yen</option>
+				</select>
 			</div>
 		</div>
 	);

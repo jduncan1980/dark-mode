@@ -187,28 +187,30 @@ img {
 	margin: 2rem 0;
 }
 
+.select-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	min-width: 200px;
+	margin: 0 auto 20px auto;
+}
+
 .currency-select {
 	// display: block;
 	font-size: 16px;
 	font-family: inherit;
 	font-weight: 700;
 	color: #444;
-	line-height: 1;
 	padding: 0.6em 1.4em 0.5em 0.8em;
-	width: 10%;
-	margin: 0 10px 0 0;
+	width: 100%;
+	margin: 10px 0;
 	border: 1px solid #aaa;
 	box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
 	border-radius: 0.5em;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background-color: #fff;
-	background-image: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
-	background-repeat: repeat;
-	background-position: right 0.7em top 50%, 0 0;
 	transition: all 0.5s ease;
 	outline: none;
+
 	&:hover {
 		transform: scale(1.1);
 		border: 1px solid rgb(88, 88, 88);
@@ -232,6 +234,7 @@ img {
 	}
 	&:active {
 		box-shadow: 13px 13px 15px -20px rgba(0, 0, 0, 0.58);
+		transform: scale(0.9);
 		background-color: #ffae17;
 
 		&:disabled {
@@ -240,7 +243,11 @@ img {
 		}
 	}
 }
-
+.toggle__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .dark-mode__toggle {
 	background: papayawhip;
 	border-radius: 50px;
@@ -248,7 +255,6 @@ img {
 	height: 20px;
 	position: relative;
 	width: 40px;
-	margin-left: 20px;
 }
 
 .toggle {
@@ -259,6 +265,11 @@ img {
 	position: absolute;
 	transition: 0.2s;
 	width: 20px;
+}
+
+.toggle__label {
+	font-size: 1.3rem;
+	margin-top: 2px;
 }
 
 .toggled {
@@ -290,13 +301,20 @@ img {
 	margin-bottom: 16px;
 }
 
+.recharts-surface {
+	padding-right: 4%;
+	min-width: 100%;
+	@media only screen and (min-width: 501px) and (max-width: 700px) {
+		padding-right: 6%;
+	}
+
+	@media only screen and (max-width: 500px) {
+		padding-right: 10%;
+	}
+}
+
 .coin__title {
 	display: block;
-	margin-left: 20px;
-
-	@media only screen and (max-width: 700px) {
-		margin-left: 25px;
-	}
 }
 
 .coin__symbol {
@@ -306,6 +324,10 @@ img {
 
 .coin__logo {
 	width: 5rem;
+
+	@media only screen and (max-width: 700px) {
+		width: 4rem;
+	}
 }
 
 .coin__price {
