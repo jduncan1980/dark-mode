@@ -12,7 +12,7 @@ const getCurrencyType = (currency) => {
 		return '$';
 	} else if (currency === 'eur') {
 		return '€';
-	} else if (currency === 'won') {
+	} else if (currency === 'krw') {
 		return '₩';
 	} else if (currency === 'rub') {
 		return '₽';

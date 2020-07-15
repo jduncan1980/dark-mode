@@ -236,11 +236,10 @@ img {
 		box-shadow: 13px 13px 15px -20px rgba(0, 0, 0, 0.58);
 		transform: scale(0.9);
 		background-color: #ffae17;
-
-		&:disabled {
-			background-color: #333;
-			color: #fff;
-		}
+	}
+	&:disabled {
+		background-color: #333;
+		color: #fff;
 	}
 }
 .toggle__container {
